@@ -23,6 +23,12 @@ gulp.task('js', function() {
         .pipe(gulp.dest('static'));
 });
 
+// Clean
+gulp.task('clean', function() {
+    return gulp.src('static', {read: false})
+        .pipe(plugins.clean());
+});
+
 // Images optimisation
 gulp.task('img', function () {
     return gulp.src('/src/img/*.{png,jpg,svg}')
@@ -41,7 +47,7 @@ gulp.task('watch', function(){
 });
 
 // Build
-gulp.task('build', ['css', 'js', 'img']);
+gulp.task('build', ['clean', 'css', 'js', 'img']);
 
 // Default
 gulp.task('default', ['watch']);

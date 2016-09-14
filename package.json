@@ -11,6 +11,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
+    "gulp-clean": "^0.3.2",
     "gulp-csso": "latest",
     "gulp-imagemin": "^3.0.3",
     "gulp-livereload": "^3.8.1",
