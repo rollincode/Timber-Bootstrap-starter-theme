@@ -9,6 +9,9 @@
   "author": "Fanch",
   "license": "GPL-2.0",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
     "gulp-clean": "^0.3.2",

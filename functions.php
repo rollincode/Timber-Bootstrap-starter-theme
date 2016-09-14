@@ -41,16 +41,16 @@ class StarterSite extends TimberSite {
 	}
 
 	function load_scripts() {
-        $this->live_reload();
-	}
-
-	private function live_reload() {
+	    // Livereload
         if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
             wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
             wp_enqueue_script('livereload');
         }
-    }
 
+        // Bootstrap
+        wp_register_script('bootstrap-js', get_stylesheet_directory_uri() .'/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', null, false, true);
+        wp_enqueue_script('bootstrap-js');
+	}
 
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own fuctions to twig */
