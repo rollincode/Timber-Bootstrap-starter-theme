@@ -12,19 +12,3 @@ Tags:
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-h1 {
-  @include font-size(3);
-  strong {
-    color: white;
-  }
-}
-
-h1:after {
-  content: 'yolo';
-  display: flex;
-}
-
-h2 {
-  text-align: justify;
-}
