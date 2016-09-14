@@ -1,0 +1,29 @@
+{
+  "name": "rollincode/timber-bootstrap-starter-theme",
+  "description": "Timber & Bootstrap Starter theme",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+      {
+          "name": "fanch",
+          "email": "fanch@fracanet.fr"
+      }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+  	"installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+  	}
+	},
+  "require": {
+	  "wpackagist-plugin/timber-library": "0.22.*"
+  }
+}

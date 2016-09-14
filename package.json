@@ -1,0 +1,20 @@
+{
+  "name": "rollincode-timber-theme",
+  "version": "1.0.0",
+  "description": "Starter theme for wordpress, use Timber & Bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fanch",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-csso": "latest",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-load-plugins": "latest",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

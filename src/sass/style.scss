@@ -1,0 +1,30 @@
+/*!
+Theme Name: Rollincode Timber Starter Theme
+Author: Fanch
+Description: Starter Theme with Bootstrap to use with Timber
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rollincode
+Tags:
+
+*/
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+h1 {
+  @include font-size(3);
+  strong {
+    color: white;
+  }
+}
+
+h1:after {
+  content: 'yolo';
+  display: flex;
+}
+
+h2 {
+  text-align: justify;
+}
