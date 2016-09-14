@@ -42,6 +42,9 @@ gulp.task('watch', function(){
     gulp.watch('**/*.php').on('change', function(file) {
         plugins.livereload.changed(file.path);
     });
+    gulp.watch('**/*.twig').on('change', function(file) {
+        plugins.livereload.changed(file.path);
+    });
     gulp.watch('src/sass/**/*.scss',['css']);
     gulp.watch('src/js/site.js',['js']);
 });
