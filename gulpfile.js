@@ -6,17 +6,20 @@ var plugins = require('gulp-load-plugins')();                       // load all 
 //  CSS
 gulp.task('css', function () {
     return gulp.src('src/sass/style.scss')
+        .pipe(plugins.plumber())
         .pipe(plugins.sass())                                       // compile Sass
-        .pipe(plugins.sass().on('error', plugins.sass.logError))
         .pipe(plugins.autoprefixer())                               // autoprefix
         .pipe(plugins.csso())                                       // minify
+        .pipe(plugins.livereload())
         .pipe(gulp.dest(''));
 });
 
 // JS
 gulp.task('js', function() {
     return gulp.src('src/js/site.js')
+        .pipe(plugins.plumber())
         .pipe(plugins.uglify())                                     // minify
+        .pipe(plugins.livereload())
         .pipe(gulp.dest('static'));
 });
 
@@ -29,7 +32,12 @@ gulp.task('img', function () {
 
 // Watch
 gulp.task('watch', function(){
-    gulp.watch('sass/**/*.scss',['css', 'js']);
+    plugins.livereload.listen(35729);
+    gulp.watch('**/*.php').on('change', function(file) {
+        plugins.livereload.changed(file.path);
+    });
+    gulp.watch('src/sass/**/*.scss',['css']);
+    gulp.watch('src/js/site.js',['js']);
 });
 
 // Build

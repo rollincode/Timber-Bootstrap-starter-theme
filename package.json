@@ -13,7 +13,9 @@
     "gulp-autoprefixer": "latest",
     "gulp-csso": "latest",
     "gulp-imagemin": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "latest",
+    "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0"
   }

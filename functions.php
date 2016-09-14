@@ -19,6 +19,7 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+		add_action( 'init', array( $this, 'load_scripts' ) );
 		parent::__construct();
 	}
 
@@ -39,10 +40,17 @@ class StarterSite extends TimberSite {
 		return $context;
 	}
 
-	function myfoo( $text ) {
-		$text .= ' bar!';
-		return $text;
+	function load_scripts() {
+        $this->live_reload();
 	}
+
+	private function live_reload() {
+        if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+            wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+            wp_enqueue_script('livereload');
+        }
+    }
+
 
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own fuctions to twig */
