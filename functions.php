@@ -48,9 +48,9 @@ class StarterSite extends TimberSite {
         }
 
         // Bootstrap
-        wp_register_script('bootstrap-js', get_stylesheet_directory_uri() .'/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', null, false, true);
+        wp_register_script('bootstrap-js', get_stylesheet_directory_uri() .'/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', array('jquery'), false, true);
         wp_enqueue_script('bootstrap-js');
-	}
+    }
 
 	function add_to_twig( $twig ) {
 		/* this is where you can add your own fuctions to twig */

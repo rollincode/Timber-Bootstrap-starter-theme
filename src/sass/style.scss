@@ -16,3 +16,7 @@ $icon-font-path: "node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+
+@import "contents/header";
+@import "contents/content";
+@import "contents/footer";
