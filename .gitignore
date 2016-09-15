@@ -3,3 +3,4 @@ static/*.js
 static/*.png
 static/*.jpg
 static/*.svg
+/style.css
