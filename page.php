@@ -24,4 +24,8 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-Timber::render( array( 'page-' . $post->post_name . '.twig', 'page.twig' ), $context );
+$templates = array( 'page-' . $post->post_name . '.twig', 'page.twig' );
+if ( is_front_page() ) {
+    array_unshift( $templates, 'frontpage.twig' );
+}
+Timber::render( $templates, $context );
