@@ -48,7 +48,7 @@ class StarterSite extends TimberSite {
         }
 
         // Bootstrap
-        wp_register_script('bootstrap-js', get_stylesheet_directory_uri() .'/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', array('jquery'), false, true);
+        wp_register_script('bootstrap-js', get_template_directory_uri() .'/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', array('jquery'), false, true);
         wp_enqueue_script('bootstrap-js');
     }
 
