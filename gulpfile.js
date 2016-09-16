@@ -31,9 +31,9 @@ gulp.task('clean', function() {
 
 // Images optimisation
 gulp.task('img', function () {
-    return gulp.src('/src/img/*.{png,jpg,svg}')
+    return gulp.src('src/img/*.{png,jpg,svg}')
         .pipe(plugins.imagemin())
-        .pipe(gulp.dest('/static/img'));
+        .pipe(gulp.dest('static/img'));
 });
 
 // Watch
