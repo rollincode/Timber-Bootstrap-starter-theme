@@ -20,7 +20,7 @@ Installation
 
 - Clone the repo in to the themes directory of your development WordPress installation.
 
-    `git clone ...`
+    `git clone https://github.com/rollincode/Timber-Bootstrap-starter-theme.git`
     
 - Change to the `your-theme-name` directory
 - Remove the `.git` directory and run `git init` to initialize your own git repo
