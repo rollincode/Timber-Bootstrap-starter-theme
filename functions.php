@@ -65,6 +65,12 @@ class StarterSite extends TimberSite {
 		return $twig;
 	}
 
+	static function dump($var) {
+        echo '<pre>';
+        var_dump($var);
+        echo '</pre>';
+    }
+
 }
 
 new StarterSite();
