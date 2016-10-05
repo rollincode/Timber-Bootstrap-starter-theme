@@ -7,7 +7,7 @@ var plugins = require('gulp-load-plugins')();                       // load all 
 gulp.task('css', function () {
     return gulp.src('src/sass/style.scss')
         .pipe(plugins.plumber())
-        .pipe(plugins.sass())                                       // compile Sass
+        .pipe(plugins.sass().on('error', plugins.sass.logError))    // compile Sass
         .pipe(plugins.autoprefixer())                               // autoprefix
         .pipe(plugins.csso())                                       // minify
         .pipe(plugins.livereload())
