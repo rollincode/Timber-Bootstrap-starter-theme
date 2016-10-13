@@ -8,7 +8,7 @@
 			{% set submenu = false %}
 		{% endif %}
 
-		<li class="{{item.classes | join(' ')}}{% if submenu %}dropdown{% endif %}">
+		<li class="{{item.classes | join(' ')}}{% if submenu %} dropdown{% endif %}">
 			<a
 				href="{{item.get_link}}"
 				{% if submenu %}
