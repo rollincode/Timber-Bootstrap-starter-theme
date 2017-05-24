@@ -6,20 +6,24 @@ var plugins = require('gulp-load-plugins')();                       // load all 
 //  CSS
 gulp.task('css', function () {
     return gulp.src('src/sass/style.scss')
+        .pipe(plugins.sourcemaps.init())
         .pipe(plugins.plumber())
         .pipe(plugins.sass().on('error', plugins.sass.logError))    // compile Sass
         .pipe(plugins.autoprefixer())                               // autoprefix
         .pipe(plugins.csso())                                       // minify
         .pipe(plugins.livereload())
+        .pipe(plugins.sourcemaps.write('.'))
         .pipe(gulp.dest(''));
 });
 
 // JS
 gulp.task('js', function() {
     return gulp.src('src/js/site.js')
+        .pipe(plugins.sourcemaps.init())
         .pipe(plugins.plumber())
         .pipe(plugins.uglify())                                     // minify
         .pipe(plugins.livereload())
+        .pipe(plugins.sourcemaps.write('.'))
         .pipe(gulp.dest('static'));
 });
 
